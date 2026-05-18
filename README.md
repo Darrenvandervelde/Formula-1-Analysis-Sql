@@ -1,5 +1,9 @@
 # Formula 1 Project - Data Analysis
 
+## [Preview Questions](https://github.com/Darrenvandervelde/Formula-1-Project-Data-Analysis-/blob/main/Docs/1.Formula_1_Data_Analysis__Capstone_Project_Questions.pdf)
+## [Preview Answers](https://github.com/Darrenvandervelde/Formula-1-Project-Data-Analysis-/blob/main/SQL)
+
+
 ## Overview
 
 This project provides a **comprehensive analysis of Formula 1 race data** using SQL queries. The dataset contains information about:
