@@ -27,7 +27,7 @@ USE formula_1_2025_complete;
 SET GLOBAL local_infile = 1;
 
 -- 1. circuits
-LOAD DATA LOCAL INFILE 'C:\\Users\\User\\OneDrive - ITonlinelearning Ltd\\Desktop\\formula_1_2025_complete_dataset\\circuits.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/User/Downloads/formula_1_2025_complete_dataset/circuits.csv'
 INTO TABLE circuits
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"' 
@@ -36,7 +36,7 @@ IGNORE 1 LINES
 (circuitId, circuitRef, name, location, country, lat, lng, alt, url);
 
 -- 2. constructors
-LOAD DATA LOCAL INFILE 'C:\\Users\\User\\OneDrive - ITonlinelearning Ltd\\Desktop\\formula_1_2025_complete_dataset\\constructors.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/User/Downloads/formula_1_2025_complete_dataset/constructors.csv'
 INTO TABLE constructors
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"' 
@@ -45,7 +45,7 @@ IGNORE 1 LINES
 (constructorId, constructorRef, name, nationality, url);
 
 -- 3. drivers
-LOAD DATA LOCAL INFILE 'C:\\Users\\User\\OneDrive - ITonlinelearning Ltd\\Desktop\\formula_1_2025_complete_dataset\\drivers.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/User/Downloads/formula_1_2025_complete_dataset/drivers.csv'
 INTO TABLE drivers
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"' 
@@ -54,7 +54,7 @@ IGNORE 1 LINES
 (driverId, driverRef, number, code, forename, surname, dob, nationality, url);
 
 -- 4. seasons
-LOAD DATA LOCAL INFILE 'C:\\Users\\User\\OneDrive - ITonlinelearning Ltd\\Desktop\\formula_1_2025_complete_dataset\\seasons.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/User/Downloads/formula_1_2025_complete_dataset/seasons.csv'
 INTO TABLE seasons
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"' 
@@ -63,7 +63,7 @@ IGNORE 1 LINES
 (year, url);
 
 -- 5. status
-LOAD DATA LOCAL INFILE 'C:\\Users\\User\\OneDrive - ITonlinelearning Ltd\\Desktop\\formula_1_2025_complete_dataset\\status.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/User/Downloads/formula_1_2025_complete_dataset/status.csv'
 INTO TABLE status
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"' 
@@ -72,7 +72,7 @@ IGNORE 1 LINES
 (statusId, status);
 
 -- 6. races
-LOAD DATA LOCAL INFILE 'C:\\Users\\User\\OneDrive - ITonlinelearning Ltd\\Desktop\\formula_1_2025_complete_dataset\\races.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/User/Downloads/formula_1_2025_complete_dataset/races.csv'
 INTO TABLE races
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"' 
@@ -81,7 +81,7 @@ IGNORE 1 LINES
 (raceId, year, round, circuitId, name, date, time, url, fp1_date, fp1_time, fp2_date, fp2_time, fp3_date, fp3_time, quali_date, quali_time, sprint_date, sprint_time);
 
 -- 7. results
-LOAD DATA LOCAL INFILE 'C:\\Users\\User\\OneDrive - ITonlinelearning Ltd\\Desktop\\formula_1_2025_complete_dataset\\results.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/User/Downloads/formula_1_2025_complete_dataset/results.csv'
 INTO TABLE results
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"' 
@@ -112,7 +112,7 @@ SET
 
 
 -- 8. driver_standings
-LOAD DATA LOCAL INFILE 'C:\\Users\\User\\OneDrive - ITonlinelearning Ltd\\Desktop\\formula_1_2025_complete_dataset\\driver_standings.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/User/Downloads/formula_1_2025_complete_dataset/driver_standings.csv'
 INTO TABLE driver_standings
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"' 
@@ -121,7 +121,7 @@ IGNORE 1 LINES
 (driverStandingsId, raceId, driverId, points, position, positionText, wins);
 
 -- 9. constructor_standings
-LOAD DATA LOCAL INFILE 'C:\\Users\\User\\OneDrive - ITonlinelearning Ltd\\Desktop\\formula_1_2025_complete_dataset\\constructor_standings.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/User/Downloads/formula_1_2025_complete_dataset/constructor_standings.csv'
 INTO TABLE constructor_standings
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"' 
@@ -130,7 +130,7 @@ IGNORE 1 LINES
 (constructorStandingsId, raceId, constructorId, points, position, positionText, wins);
 
 -- 10. constructor_results
-LOAD DATA LOCAL INFILE 'C:\\Users\\User\\OneDrive - ITonlinelearning Ltd\\Desktop\\formula_1_2025_complete_dataset\\constructor_results.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/User/Downloads/formula_1_2025_complete_dataset/constructor_results.csv'
 INTO TABLE constructor_results
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"' 
@@ -139,7 +139,7 @@ IGNORE 1 LINES
 (constructorResultsId, raceId, constructorId, points, status);
 
 -- 11. qualifying
-LOAD DATA LOCAL INFILE 'C:\\Users\\User\\OneDrive - ITonlinelearning Ltd\\Desktop\\formula_1_2025_complete_dataset\\qualifying.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/User/Downloads/formula_1_2025_complete_dataset/qualifying.csv'
 INTO TABLE qualifying
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"' 
@@ -148,7 +148,7 @@ IGNORE 1 LINES
 (qualifyId, raceId, driverId, constructorId, number, position, q1, q2, q3);
 
 -- 12. sprint_results
-LOAD DATA LOCAL INFILE 'C:\\Users\\User\\OneDrive - ITonlinelearning Ltd\\Desktop\\formula_1_2025_complete_dataset\\sprint_results.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/User/Downloads/formula_1_2025_complete_dataset/sprint_results.csv'
 INTO TABLE sprint_results
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"' 
@@ -157,7 +157,7 @@ IGNORE 1 LINES
 (resultId, raceId, driverId, constructorId, number, grid, position, positionText, positionOrder, points, laps, time, milliseconds, fastestLap, fastestLapTime, statusId);
 
 -- 13. lap_times
-LOAD DATA LOCAL INFILE 'C:\\Users\\User\\OneDrive - ITonlinelearning Ltd\\Desktop\\formula_1_2025_complete_dataset\\lap_times.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/User/Downloads/formula_1_2025_complete_dataset/lap_times.csv'
 INTO TABLE lap_times
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"' 
@@ -166,7 +166,7 @@ IGNORE 1 LINES
 (raceId, driverId, lap, position, time, milliseconds);
 
 -- 14. pit_stops
-LOAD DATA LOCAL INFILE 'C:\\Users\\User\\OneDrive - ITonlinelearning Ltd\\Desktop\\formula_1_2025_complete_dataset\\pit_stops.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/User/Downloads/formula_1_2025_complete_dataset/pit_stops.csv'
 INTO TABLE pit_stops
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"' 
