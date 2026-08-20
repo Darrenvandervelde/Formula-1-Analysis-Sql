@@ -1,82 +1,81 @@
 # Formula 1 Project - Data Analysis
 
-### [Preview Questions](https://github.com/Darrenvandervelde/Formula-1-Project-Data-Analysis-/blob/main/Docs/1.Formula_1_Data_Analysis__Capstone_Project_Questions.pdf)
-### [Preview Answers](https://github.com/Darrenvandervelde/Formula-1-Project-Data-Analysis-/blob/main/SQL)
+A focused collection of SQL analyses and example notebooks for exploring historical Formula 1 race data.
 
+Overview
 
-## Overview
+This repository provides SQL queries and optional notebooks to analyze Formula 1 results, drivers, constructors, lap times, circuits, and related telemetry. The analyses are written in SQL for portability across database engines and may be combined with Python notebooks for visualization.
 
-This project provides a **comprehensive analysis of Formula 1 race data** using SQL queries. The dataset contains information about:
+Highlights
 
-- **Races**: Grand Prix, year, round, location  
-- **Drivers**: Personal information and race participation  
-- **Constructors**: Teams and their historical performance  
-- **Results**: Race outcomes, points, and positions  
-- **Circuits**: Race tracks and locations  
-- **Lap Times**: Performance metrics per driver per race  
+- Reproducible SQL queries for common F1 analyses (top drivers, season standings, circuit performance)
+- Example Jupyter notebooks showing how to run queries and create visualizations (if included)
+- Portable: SQL scripts compatible with SQLite, PostgreSQL, MySQL with minimal changes
 
-The goal is to analyze patterns such as:
+Repository structure
 
-- Decades with the most races  
-- Top drivers and constructors  
-- High-altitude circuits  
-- Average points per race  
-- Lap time analysis of winning drivers  
+- SQL/ : SQL query files and example scripts
+- notebooks/ : Jupyter notebooks (optional)
+- data/ : raw CSV or exported SQL (optional)
+- Docs/ : documentation, project questions, and reference PDFs
 
----
+Getting started
 
-## Prerequisites
+1. Import the dataset into your preferred SQL engine (SQLite, MySQL, Postgres).
+2. Run the SQL scripts in the `SQL/` directory, or open the notebooks in `notebooks/`.
 
-Before running the project, you need:
+Quick examples
 
-1. **MySQL Server**  
-   - Version 8.x recommended  
-   - [Download MySQL Community Server](https://dev.mysql.com/downloads/mysql/)  
+- SQL/top_drivers_by_wins.sql — rank drivers by career wins
+- SQL/season_standings.sql — compute season points and standings
+- SQL/circuit_analysis.sql — lap time distributions per circuit
 
-2. **MySQL Workbench**  
-   - GUI tool to manage your MySQL databases and execute queries  
-   - [Download MySQL Workbench](https://dev.mysql.com/downloads/workbench/)  
+Requirements
 
-3. **SQL Dataset**  
-   - Import the provided `.sql` dataset into your MySQL server.  
+- A SQL database (SQLite/Postgres/MySQL) or SQL client
+- (Optional) Python 3.x with pandas, matplotlib/seaborn for visualization
+- (Optional) Jupyter Lab/Notebook to run the example notebooks
 
----
+How to run (SQLite example)
 
-## Installation
+1. Create or open a database: `sqlite3 f1.db`
+2. Import CSVs or run a SQL dump: `sqlite3 f1.db < data/f1_dataset.sql`
+3. Run an example query: `sqlite3 f1.db "SELECT * FROM races LIMIT 10;"`
 
-### Step 1: Install MySQL Server
+Contributing
 
-1. Download the installer from [MySQL Downloads](https://dev.mysql.com/downloads/mysql/).  
-2. Run the installer and follow the setup wizard.  
-3. Set a root password and remember it (you’ll need it to connect via Workbench).  
-4. Complete the installation and start the MySQL server.  
+Contributions are welcome. To contribute:
+- Open an issue describing the change or feature
+- Submit a pull request with tests or example outputs where relevant
+- Keep SQL queries documented with comments and assumptions
 
-### Step 2: Install MySQL Workbench
+License
 
-1. Download MySQL Workbench from [MySQL Workbench Downloads](https://dev.mysql.com/downloads/workbench/).  
-2. Run the installer and follow the installation instructions.  
-3. Open MySQL Workbench and **create a new connection**:  
-   - Host: `localhost`  
-   - Port: `3306`  
-   - Username: `root`  
-   - Password: (your root password)  
-4. Test the connection to ensure it works.  
+This project is licensed under the MIT License — see the LICENSE file for details.
 
-### Step 3: Import the Database
+Repository topics (suggested)
 
-1. Open MySQL Workbench and connect to your MySQL server.  
-2. Go to **Server > Data Import**.  
-3. Select **Import from Self-Contained File** and choose your `.sql` dataset.  
-4. Choose **New Schema** (e.g., `f1_analysis`) or select an existing one.  
-5. Click **Start Import**.  
+I recommend adding these GitHub repository topics to improve discoverability:
+- formula-1
+- f1
+- data-analysis
+- sql
+- motorsport
+- data-science
+- analytics
+- racing
+- visualization
 
----
+How to add the topics (you or a repo admin)
 
-## Usage
+- Web UI: On GitHub, go to the repository page, click "About" (top-right), and edit topics.
+- REST API (replace owner/repo and add your token):
+  curl -X PUT -H "Accept: application/vnd.github+json" -H "Authorization: Bearer GITHUB_TOKEN" \
+    https://api.github.com/repos/OWNER/REPO/topics \
+    -d '{"names":["formula-1","f1","data-analysis","sql","motorsport","data-science","analytics","racing","visualization"]}'
 
-Once the database is imported:
+I cannot update repository topics directly with the current permissions/tools, so please run the command above or use the web UI.
 
-1. Open a new SQL query tab in MySQL Workbench.  
-2. Select your database/schema:  
-   ```sql
-   USE f1_analysis;
+Contact
+
+If you want me to also add or reorganize SQL examples or generate notebooks from the SQL queries, tell me what you'd like and I will update the repo.
